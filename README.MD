@@ -1,4 +1,4 @@
-##Overview
+## Overview
 
 I developed this with my kids and now we take it into Schools to introduce a
 variety of concepts to the children and teachers.
@@ -11,4 +11,8 @@ other wifi device with a web browser) and can make the LED Matrix scroll
 messages. They can also turn 8x8 drawings into binary, then convert to decimal
 and send those numbers to see their design come up.
 
+### Build with
 
+* [Milligram](https://milligram.github.io/) - Web framework used
+* [Adafruit LED Lib](https://github.com/adafruit/Adafruit_LED_Backpack) -
+  Matrix driver code 
