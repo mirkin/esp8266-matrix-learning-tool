@@ -1,38 +1,98 @@
 <html>
 <head>
-<link rel="stylesheet" href="milligram.min.css">
+    <link rel="stylesheet" href="pure-min.css">
+    <link rel="stylesheet" href="grids-min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: #0074D9;
+            background-color: #FFF;
+        }
+        label{color:#fff;font-weight: 300;font-size: 14px;}
+        h1 { font-size: 34px; font-weight: 300; line-height: 40px; margin: 0 0 16px; }
+        h3 { font-size: 24px; font-weight: 300; line-height: 30px; margin: 0 0 2px; }
+        .pure-g > div {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .l-box {
+            padding: 1em;
+        }
+        .content{
+             padding: 1em;
+        }
+        #form-1{
+            background-color: #7FDBFF;
+        }
+        #form-2{
+            background-color: #3D9970;
+        }
+    </style>
 </head>
 <body>
-<H2>Hi you are connected to our Matrix</H2>
-<h3>Use this to update the scrolling message</h3>
-<form action="/scroll">
-  <fieldset>
-    <label for="txt">Name</label>
-    <input type="text" placeholder="Your message" id="txt" name="txt">
-    <input class="button button-primary" type="submit" value="Send Text Message">
-  </fieldset>
-</form>
-<h3>Use this to update the shape</h3>
-<form action="/shape">
-  <fieldset>
-    <label for="n1">Number 1</label>
-    <input type="text" placeholder="Your message" id="n1" name="n1">
-    <label for="n2">Number 2</label>
-    <input type="text" placeholder="Your message" id="n2" name="n2">
-    <label for="n3">Number 3</label>
-    <input type="text" placeholder="Your message" id="n3" name="n3">
-    <label for="n4">Number 4</label>
-    <input type="text" placeholder="Your message" id="n4" name="n4">
-    <label for="n5">Number 5</label>
-    <input type="text" placeholder="Your message" id="n5" name="n5">
-    <label for="n6">Number 6</label>
-    <input type="text" placeholder="Your message" id="n6" name="n6">
-    <label for="n7">Number 7</label>
-    <input type="text" placeholder="Your message" id="n7" name="n7">
-    <label for="n8">Number 8</label>
-    <input type="text" placeholder="Your message" id="n8" name="n8">
-    <input class="button button-primary" type="submit" value="Send Shape Numbers">
-  </fieldset>
-</form>
+    
+ <div class="content">   
+    <H1>Hi you are connected to our Matrix</H1>
+ </div>  
 
+<div class="content" id="form-1">
+<h3>Update Scrolling Message</h3>
+<form action="/scroll" class="pure-form pure-form-stacked">
+    <fieldset>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <label for="txt">Message</label>
+                <input id="txt" name="txt" class="pure-u-23-24" type="text" placeholder="Your message">
+            </div>
+        </div>
+    </fieldset>
+    <button type="submit" class="pure-button pure-button-primary">Update Message</button>
+</form>
+</div>
+
+
+<div class="content" id="form-2">
+<h3>Update Shape using Decimals</h3>
+<form action="/shape" class="pure-form pure-form-stacked">
+    <fieldset>
+        <div class="pure-g">
+            <div class="pure-u-6-24 pure-u-sm-3-24">
+                <label for="n1">Number 1</label>
+                <input id="n1" name="n1" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n2">Number 2</label>
+                <input id="n2" name="n2" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n3">Number 3</label>
+                <input id="n3" name="n3" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n4">Number 4</label>
+                <input id="n4" name="n4" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n5">Number 5</label>
+                <input id="n5" name="n5" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n6">Number 6</label>
+                <input id="n6" name="n6" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n7">Number 7</label>
+                <input id="n7" name="n7" class="pure-u-23-24" type="text">
+            </div>
+            <div class="pure-u-6-24 pure-u-sm-3-24 ">
+                <label for="n8">Number 8</label>
+                <input id="n8" name="n8" class="pure-u-23-24" type="text">
+            </div>
+        </div>
+    </fieldset>
+    <button type="submit" class="pure-button pure-button-primary">Update Matrix</button>
+</form>
+</div>
 </body></html>
