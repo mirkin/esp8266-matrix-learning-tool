@@ -31,6 +31,7 @@ ESP8266WebServer server(80);
 String scroll_message=" I am working";
 int8_t my_mode=MODE_SCROLL;
 int scroll_position=0;
+int scroll_sleep_time=100;
 
 String http_header="HTTP/1.1 200 OK\r\nContent-Type: text/html\r\n\r\n<!DOCTYPE HTML>\r\n<html>\r\n";
 
@@ -92,6 +93,7 @@ void setup() {
   });
   */
   server.on("/scroll",setup_message);
+  server.on("/set_scroll_speed",set_scroll_speed);
   server.on("/shape",shape_update);
   server.on("/cool", [](){  
     server.send(200, "text/plain", "elvis");              
@@ -198,6 +200,14 @@ void shape_update(){
     server.send(200, "text/plain", "Sure I'll update the shape "+server.arg("n"+String(1)));    
 }
 
+void set_scroll_speed(){
+  if (server.hasArg("speed"))
+  {
+    scroll_sleep_time=server.arg("speed").toInt();
+    server.send(200, "text/plain", "Sure I'll scroll speed - "+server.arg("speed"));    
+  }
+}
+
 void setup_message(){
   if (server.hasArg("txt"))
   {
@@ -226,7 +236,7 @@ void do_scroll()
   scroll_position=(scroll_position+1) % (scroll_message.length()*6);
   matrix.print(scroll_message);
   matrix.writeDisplay();
-  delay(100);
+  delay(scroll_sleep_time);
 }
 /*
 void wifi_command()

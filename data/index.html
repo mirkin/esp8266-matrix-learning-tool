@@ -29,6 +29,7 @@
         #form-2{
             background-color: #3D9970;
         }
+        #form-3 label{color: #0074D9;}
     </style>
 </head>
 <body>
@@ -93,6 +94,21 @@
         </div>
     </fieldset>
     <button type="submit" class="pure-button pure-button-primary">Update Matrix</button>
+</form>
+</div>
+
+<div class="content" id="form-3">
+<h3>Update Scrolling Speed</h3>
+<form action="/set_scroll_speed" class="pure-form pure-form-stacked">
+    <fieldset>
+        <div class="pure-g">
+            <div class="pure-u-1">
+                <label for="speed">Sleep time (in milliseconds 25 fast 1000 slow)</label>
+                <input id="speed" name="speed" class="pure-u-23-24" type="text" placeholder="sleep time">
+            </div>
+        </div>
+    </fieldset>
+    <button type="submit" class="pure-button pure-button-primary">Update Speed</button>
 </form>
 </div>
 </body></html>
