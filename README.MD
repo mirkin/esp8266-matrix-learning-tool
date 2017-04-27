@@ -15,6 +15,10 @@ and send those numbers to see their design come up.
 
 We used Arduino IDE 1.8.2 on a mac and had to set up [ESP8266 Sketch Data Upload](https://github.com/esp8266/arduino-esp8266fs-plugin/releases/latest)
 
+On Feather Huzzah ESP8266 Wifi Data SDA was pin 4 clock SCL was pin 5 as labeled on the board. These are the last 2 pins same side as lipo socket furthest away from usb socket.
+
+On Tinxi NodeMCU Lua ESP-12E board the pins were on the other side 2nd and 3rd to last far end from the usb. Labeled D1 (Clock) D2 (Data).
+
 ### Built with
 
 * [Pure CSS](https://purecss.io) - Web framework used
